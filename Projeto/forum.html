@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum de Culinária IPS</title>
+    <link rel="stylesheet" href="Styles/forumStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="title"><a href="#" id="pageTitle">Fórum de Culinária IPS</a></div>
+        <!--Estas labels permitem mostrar e esconder opções clicando num elemento (neste caso o botão do menu e a opção das categorias) -->
+        <label for="menuButton" class="toggle">
+          <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="menuButton">
+        <ul>
+          <li><a href="index.html" target="_blank" rel="noopener noreferrer">Site de Culinária IPS</a></li>
+          <li><a href="adicionarPost.html">+ Adicionar Post</a></li>
+          <li><a href="editarPost.html">Editar Post</a></li>
+          <li><a href="eliminarPost.html">- Apagar Post</a></li>
+          <li><a href="gestaoUtilizadores.html"><i class="fa fa-users" aria-hidden="true"></i> Gerir Utilizadores</a></li>
+          <li><a href="definicoes.html"><i class="fa fa-cog" aria-hidden="true"></i> Definições</a></li>
+          <li><a href="conta.html"><i class="fa fa-user-circle" aria-hidden="true"> Conta</i></a></li>
+        </ul>
+      </nav>
+
+      <!--Exemplo de publicação 1-->
+      <div class="post">
+        <div>
+          <p id="postTitle">O meu primeiro arroz de pato!</p>
+          <img src="Images/arrozDePato.jpg" alt="postImage">
+          <div class="postButtons">
+            <button id="upvote"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+            <button id="downvote"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></button>
+            <button id="reactions"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+            <button id="report"><i class="fa fa-flag" aria-hidden="true"></i></button>
+          </div>
+          <div id="comments">
+            <p><i class="fa fa-comment-o" aria-hidden="true"></i>  Comentários:</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Exemplo de publicação 2-->
+      <div class="post">
+        <div>
+          <p id="postTitle">Quando nem torradas sabes fazer XD</p>
+          <img src="Images/burntToast.jpg" alt="postImage">
+          <div class="postButtons">
+            <button id="upvote"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+            <button id="downvote"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></button>
+            <button id="reactions"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+            <button id="report"><i class="fa fa-flag" aria-hidden="true"></i></button>
+          </div>
+          <div id="comments">
+            <p><i class="fa fa-comment-o" aria-hidden="true"></i>  Comentários:</p>
+          </div>
+        </div>
+      </div>
+  
+</body>
+</html>

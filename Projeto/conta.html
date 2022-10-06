@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum de Culinária IPS</title>
+    <link rel="stylesheet" href="Styles/forumStyle.css">
+    <link rel="stylesheet" href="Styles/forms.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="title"><a href="forum.html" id="pageTitle">Fórum de Culinária IPS</a></div>
+        <!--Estas labels permitem mostrar e esconder opções clicando num elemento (neste caso o botão do menu e a opção das categorias) -->
+        <label for="menuButton" class="toggle">
+          <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="menuButton">
+        <ul>
+            <li><a href="index.html" target="_blank" rel="noopener noreferrer">Site de Culinária IPS</a></li>
+            <li><a href="adicionarPost.html">+ Adicionar Post</a></li>
+            <li><a href="editarPost.html">Editar Post</a></li>
+            <li><a href="eliminarPost.html">- Apagar Post</i></a></li>
+            <li><a href="gestaoUtilizadores.html"><i class="fa fa-users" aria-hidden="true"></i> Gerir Utilizadores</a></li>
+            <li><a href="definicoes.html"><i class="fa fa-cog" aria-hidden="true"></i> Definições</a></li>
+            <li><a href="conta.html"><i class="fa fa-user-circle" aria-hidden="true"> Conta</i></a></li>
+        </ul>
+      </nav>
+
+      <div class="form">
+        <h2>Log In</h2>
+        <form>
+            <fieldset>
+                <legend>Introduza a informação:</legend>
+                <label for="lemail">Email:</label>
+                <input id="lemail" type="text"> 
+                <br>
+                <label for="lpass">Password:</label>
+                <input id="lpass" type="password"> 
+                <br>
+                <input id="loginBtn" type="submit" value="Log in" class="btn">
+            </fieldset>
+        </form>
+      </div>
+      
+      <div class="form">
+        <h2>Sign Up</h2>
+        <form>
+            <fieldset>
+                <legend>Introduza a informação:</legend>
+                <label for="remail">Email:</label>
+                <input id="remail" type="text">
+                <br>
+                <label for="username">Username:</label>
+                <input id="username" type="text">
+                <br>
+                <label for="rpass">Password (1):</label>
+                <input id="rpass" type="password"> 
+                <br>
+                <label for="rpass2">Password (2):</label>
+                <input id="rpass2" type="password"> 
+                <br>
+                <input id="registarBtn" type="submit" value="Registar" class="btn">
+            </fieldset>
+        </form>
+      </div>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="scripts/forumFunc.js"></script>
+      <script src="scripts/routes.js"></script>
+</body>
+</html>

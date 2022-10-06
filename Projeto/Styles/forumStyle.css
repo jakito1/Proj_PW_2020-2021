@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  body{
+    background: black;
+  }
+  
+  /*Estiliza o nav e permite que o menu continue a aparecer à medida que fazemos scroll*/
+  nav{
+    background: rgb(0, 119, 255);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  /*Formata o fundo do nav*/
+  nav:after{
+    content: '';
+    clear: both;
+    display: table;
+  }
+  
+  /*Formata e estiliza o título*/
+  nav .title{
+    float: left;
+    color: goldenrod;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    text-decoration: none;
+  }
+
+  #pageTitle{
+    text-decoration: none;
+    color: goldenrod;
+  }
+  
+  /*Posiciona os elementos do menu à direita*/
+  nav ul{
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+  }
+  
+  /*Põe os elementos do menu em linha e dá cor ao fundo das subcateforias*/
+  nav ul li{
+    display: inline-block;
+    background: rgb(0, 119, 255);
+    margin: 0 5px;
+    padding-left: 0px;
+  }
+  
+  #addCategory{
+    background-color: rgb(16, 93, 138);
+    padding: 10px 10px;
+    margin: 10px 30px;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #addCategory:hover, #editCategory:hover, #removeCategory:hover{
+    border: solid goldenrod;
+  }
+  
+  #editCategory{
+    background-color: rgb(172, 172, 16);
+    padding: 10px 22px;
+    margin: 10px 30px;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #removeCategory{
+    background-color: red;
+    padding: 10px 14px;
+    margin: 10px 30px;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  /*Formata e estiliza as opções do menu*/
+  nav ul li a{
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 8px 15px;
+  }
+  
+  nav ul li a:hover{
+    color: goldenrod;
+  }
+  
+  /*Esconde os elementos das subcategorias*/
+  nav ul ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid gold;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+  }
+  
+  /*Faz com que se mostrem as subcategorias quando se passa o rato por cima da opção "+ Categorias"*/
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /*Subcategorias fundo*/
+  nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 200px;
+    float: none;
+    display: list-item;;
+  }
+  
+  /* Subcategorias (Truques e Dicas, Receitas Portuguesas etc) */
+  nav ul ul li a{
+    line-height: 50px;
+    font-size: 16px;
+  
+  }
+  
+  /*Esconde e formata a checkbox das Categorias*/
+  .show,.toggle,#menuButton, #menuButton-1{
+    display: none;
+  }
+  
+  
+  
+  /* | INTERFACE DO SITE NUMA JANELA COM LARGURA INFERIOR OU IGUAL A 968px | */
+  @media all and (max-width: 968px) {
+  
+    /*Põe os elementos do menu à esquerda do*/
+    nav ul{
+      float: left;
+    }
+    
+    /*Faz com que as opções do menu fiquem por à esquerda e por baixo do título */
+    nav .title{
+      padding-left: 15px;
+      width: 100%;
+    }
+    
+    /*Esconde as opções do*/
+    .show + a, ul{
+      display: none;
+    }
+  
+    /*Põe os elementos do menu em bloco*/
+    nav ul li,nav ul ul li{
+      display: block;
+      width: 100%;
+    }
+  
+    /*Categorias*/
+    .show{
+      display: block;
+      color: goldenrod;
+      font-size: 24px;
+      padding: 0 15px;
+      line-height: 70px;
+      cursor: pointer;
+    }
+  
+    .show:hover{
+      color: black;
+    }
+  
+    /*Símbolo do menu (menu hamburguer)*/
+    .toggle{
+      display: block;
+      color: goldenrod;
+      position: absolute;
+      top: 0;
+      right: 40px;
+      line-height: 70px;
+      cursor: pointer;
+      font-size: 40px;
+    }
+  
+    /*Categorias +*/
+    nav ul ul{ 
+      position: static;
+      /*estes 2 permitem que as subcategorias estejam sempre visiveis quando se clicar em "Categorias +"*/
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /*espaçamento (padding) à esquerda das subcategorias*/
+    nav ul ul a{
+      padding-left: 40px;
+    }
+  
+    nav ul ul ul li{
+      position: static;
+    }
+  
+    /*abre e fecha o menu e submenu, mostrando os elementos em bloco*/
+    [id^=menuButton]:checked + ul{
+      display: block;
+    }
+  
+  }
+  
+  .post{
+    background: black;
+    padding: 50px 0;
+    border: rgb(0, 119, 255);
+    border-style: solid;
+    color: white;
+  }
+
+  .post div{
+    justify-content: center;
+    align-items: center;
+    max-width: 500%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .post img{
+    width: 40%;
+    height: 40%;
+    margin-top: 10px;
+  }
+
+  .postButtons button{
+    font-size: 2.5rem;
+  }
+
+  #settings div{
+    text-align: center;
+    margin: 150px 200px;
+    font-size: 2rem;
+  }
+
+  #settings h2{
+    color: goldenrod;
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
+
+  #settings p{
+    color: white;
+    margin: 30px;
+  }
+
+  #settings button{
+    font-size: 2rem;
+    margin: 30px;
+  }
+
+  .changeUsername, .changePassword{
+    color: white;
+    background-color: rgb(0, 119, 255);
+    padding: 10px;
+    border-radius: 2rem;
+  }
+
+  #deleteAccount, .deleteAccount{
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 2rem;
+  }
+
